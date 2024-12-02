@@ -15,11 +15,14 @@ body {
 }
 
 main {
-  width: 320px;
+  width: 600px;
   height: 450px;
   padding: 20px;
   border-radius: 20px;
   overflow-y: auto;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: whitesmoke;
 }
