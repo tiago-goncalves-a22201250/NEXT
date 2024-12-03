@@ -1,8 +1,19 @@
-import React from 'react'
-import tecnologias from '@/private/data/tecnologias.json';
+"use client";
 
-export default function page() {
+import { useEffect, useState } from 'react';
+
+export default function Tecnologias() {
+  const [tecnologias, setTecnologias] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/tecnologias')
+      .then((response) => response.json())
+      .then((data) => setTecnologias(data));
+  }, []);
+
   return (
-    <div>page</div>
-  )
+    <div>
+      <pre>{JSON.stringify(tecnologias, null, 2)}</pre>
+    </div>
+  );
 }

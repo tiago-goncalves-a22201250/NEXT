@@ -1,0 +1,27 @@
+[
+    {
+      "title": "HTML",
+      "image": "/images/html-logo.png",
+      "description": "Linguagem de marcação para criar a estrutura de páginas web.",
+      "rating": 5
+    },
+    {
+      "title": "CSS",
+      "image": "/images/css-logo.png",
+      "description": "Linguagem de estilo para estilizar páginas web.",
+      "rating": 4
+    },
+    {
+      "title": "JavaScript",
+      "image": "/images/javascript-logo.png",
+      "description": "Linguagem de programação para funcionalidades dinâmicas.",
+      "rating": 5
+    },
+    {
+      "title": "React.js",
+      "image": "/images/react-logo.png",
+      "description": "Biblioteca JavaScript para construção de interfaces de usuário.",
+      "rating": 5
+    }
+  ]
+  
