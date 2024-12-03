@@ -8,7 +8,11 @@ export default function Tecnologias() {
   useEffect(() => {
     fetch('/api/tecnologias')
       .then((response) => response.json())
-      .then((data) => setTecnologias(data));
+      .then((data) => {
+        console.log('Dados recebidos:', data); // Verificar os dados no console
+        setTecnologias(data);
+      })
+      .catch((error) => console.error('Erro ao buscar dados:', error));
   }, []);
 
   return (
