@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
+import Header from './components/Header/page';
+import Footer from './components/Footer/page';
 import './globals.css';
 
 export default function layout({
