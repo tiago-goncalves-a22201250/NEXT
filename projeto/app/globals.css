@@ -1,13 +1,16 @@
 body {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  /* Layout e Posicionamento */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-
+  /* Fundo e Estética */
   background: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
   background-size: cover; 
   background-position: center; 
@@ -15,14 +18,13 @@ body {
 }
 
 main {
-  width: 600px;
+  /* Reset e Box Model */
+  width: 320px;
   height: 450px;
   padding: 20px;
   border-radius: 20px;
   overflow-y: auto;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* Fundo */
   background: whitesmoke;
 }
