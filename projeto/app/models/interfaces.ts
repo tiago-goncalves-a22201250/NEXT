@@ -1,6 +1,6 @@
 'use client'
 
-interface Produtos {
+export interface Produtos {
     id: Number;
     title: String;
     price: Number;
