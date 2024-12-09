@@ -1,0 +1,32 @@
+[
+    {
+      "title": "HTML",
+      "image": "/images/html.png",
+      "description": "Linguagem de marcação usada para criar a estrutura das páginas web.",
+      "rating": 5
+    },
+    {
+      "title": "CSS",
+      "image": "/images/css.png",
+      "description": "Linguagem de estilos utilizada para estilizar páginas web.",
+      "rating": 4
+    },
+    {
+      "title": "JavaScript",
+      "image": "/images/javascript.png",
+      "description": "Linguagem de programação usada para criar interatividade nas páginas web.",
+      "rating": 5
+    },
+    {
+      "title": "React.js",
+      "image": "/images/react.png",
+      "description": "Biblioteca JavaScript para construir interfaces de usuário.",
+      "rating": 5
+    },
+    {
+      "title": "Next.js",
+      "image": "/images/nextjs.png",
+      "description": "Framework React para renderização server-side e geração de sites estáticos.",
+      "rating": 5
+    }
+  ]

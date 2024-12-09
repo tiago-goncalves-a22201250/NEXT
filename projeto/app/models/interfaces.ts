@@ -8,3 +8,11 @@ export interface Produtos {
     category: String;
     image: String;
 }
+
+export interface Tecnologia {
+    title: string;
+    image: string;
+    description: string;
+    rating: number;
+  }
+  
