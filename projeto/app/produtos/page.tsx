@@ -3,7 +3,6 @@
 import useSWR from 'swr';
 import { Produtos } from '../models/interfaces';
 
-
 export default function ProdutosPage() {
 
   const fetcher = (url: string) => fetch(url).then(res => res.json())
