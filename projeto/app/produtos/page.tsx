@@ -10,7 +10,7 @@ export default function ProdutosPage() {
   const [filteredData, setFilteredData] = useState<Produtos[]>([]);
   const buy = () => {
     fetch("api/deisishop/buy", {
-      method : "POST",
+      method: "POST",
       body: JSON.stringify({
         products: cart.map(produto => produto.id),
         name: "",
@@ -21,15 +21,15 @@ export default function ProdutosPage() {
         "Content-Type": "application/json"
       }
     }).then(response => {
-      if(!response.ok) {
+      if (!response.ok) {
         throw new Error(response.statusText);
       }
-    return response.json();
-     }).then((response) => {
+      return response.json();
+    }).then((response) => {
       setCart([])
-     }).catch(() => {
+    }).catch(() => {
       console.log("error ao comprar")
-     })
+    })
   }
 
 
@@ -83,7 +83,7 @@ export default function ProdutosPage() {
             key={produto.id + ""}
             className="bg-purple-300 hover:bg-purple-400 p-4 w-1/2"
           >
-            {produto.title} - {produto.price.toFixed(2)} € 
+            {produto.title} - {produto.price.toFixed(2)} €
             <button
               className="ml-4 bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
               onClick={() => addToCart(produto)}
@@ -110,6 +110,13 @@ export default function ProdutosPage() {
           </li>
         ))}
       </ul>
+      <h2 className="flex text-2xl font-bold justify-center mt-8">comprar</h2>
+      <h2 className="flex text-2xl font-bold justify-center mt-8">comprar</h2>
+      <button
+        className="ml-4 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+        onClick={() => buy()}>
+        Comprar
+      </button>
     </section>
   );
 }
