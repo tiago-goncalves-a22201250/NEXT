@@ -36,7 +36,7 @@ export default function ProdutosPage() {
     setCart((prevCart) => [...prevCart, produto]);
   };
 
-  const removeFromCart = (produtoId: number) => {
+  const removeFromCart = (produtoId: Number) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== produtoId));
   };
 
