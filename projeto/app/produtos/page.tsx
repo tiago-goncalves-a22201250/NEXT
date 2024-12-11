@@ -100,13 +100,11 @@ export default function ProdutosPage() {
         {cart.map((produto) => (
           <li
             key={produto.id + ""}
-            className="bg-gray-200 hover:bg-gray-300 p-4 w-1/2 flex justify-between items-center"
-          >
+            className="bg-gray-200 hover:bg-gray-300 p-4 w-1/2 flex justify-between items-center">
             {produto.title} - {produto.price.toFixed(2)} €
             <button
               className="ml-4 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-              onClick={() => removeFromCart(produto.id)}
-            >
+              onClick={() => removeFromCart(produto.id)}>
               Remover
             </button>
           </li>
