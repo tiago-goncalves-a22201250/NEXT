@@ -8,6 +8,30 @@ export default function ProdutosPage() {
   const [search, setSearch] = useState("");
   const [cart, setCart] = useState<Produtos[]>([]);
   const [filteredData, setFilteredData] = useState<Produtos[]>([]);
+  const buy = () => {
+    fetch("api/deisishop/buy", {
+      method : "POST",
+      body: JSON.stringify({
+        products: cart.map(produto => produto.id),
+        name: "",
+        student: false,
+        coupon: ""
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(response => {
+      if(!response.ok) {
+        throw new Error(response.statusText);
+      }
+    return response.json();
+     }).then((response) => {
+      setCart([])
+     }).catch(() => {
+      console.log("error ao comprar")
+     })
+  }
+
 
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, error, isLoading } = useSWR<Produtos[]>('/api/products', fetcher);
