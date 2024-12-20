@@ -110,8 +110,7 @@ export default function ProdutosPage() {
           </li>
         ))}
       </ul>
-      <h2 className="flex text-2xl font-bold justify-center mt-8">comprar</h2>
-      <h2 className="flex text-2xl font-bold justify-center mt-8">comprar</h2>
+      <h2 className="flex text-2xl font-bold justify-center mt-8">Comprar</h2>
       <button
         className="ml-4 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
         onClick={() => buy()}>
