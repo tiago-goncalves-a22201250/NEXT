@@ -9,10 +9,10 @@ export default function ProdutosPage() {
   const [cart, setCart] = useState<Produtos[]>([]);
   const [filteredData, setFilteredData] = useState<Produtos[]>([]);
   const buy = () => {
-    fetch("api/deisishop/buy", {
+    fetch("/api/deisishop/buy", {
       method: "POST",
       body: JSON.stringify({
-        products: cart.map(produto => produto.id),
+        products: filteredData.map(produto => produto.id),
         name: "",
         student: false,
         coupon: ""
