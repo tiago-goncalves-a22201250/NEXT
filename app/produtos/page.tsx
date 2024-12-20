@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import useSWR from 'swr';
 import { Produtos } from '../models/interfaces';
 import { useState, useEffect } from 'react';
