@@ -25,7 +25,7 @@ export default function ProdutosPage() {
         throw new Error(response.statusText);
       }
       return response.json();
-    }).then((response) => {
+    }).then(() => {
       setCart([])
     }).catch(() => {
       console.log("error ao comprar")
@@ -60,7 +60,7 @@ export default function ProdutosPage() {
     setCart((prevCart) => [...prevCart, produto]);
   };
 
-  const removeFromCart = (produtoId: Number) => {
+  const removeFromCart = (produtoId: number) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== produtoId));
   };
 

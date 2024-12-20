@@ -1,9 +1,6 @@
 // app/progs/UserList.js
 
 import React from 'react';
-import Link from 'next/link';
-
-
 const userList = [
   { id: 1, name: 'Ada Lovelace' },
   { id: 2, name: 'Alan Turing' },

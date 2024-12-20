@@ -1,12 +1,12 @@
 'use client'
 
 export interface Produtos {
-    id: Number;
-    title: String;
-    price: Number;
-    description: String;
-    category: String;
-    image: String;
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
 }
 
 export interface Tecnologia {
