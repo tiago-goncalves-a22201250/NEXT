@@ -33,7 +33,7 @@ export default function ProdutosPage() {
     })
   }
 
-
+  
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, error, isLoading } = useSWR<Produtos[]>('/api/products', fetcher);
 
@@ -78,22 +78,30 @@ export default function ProdutosPage() {
       />
       <h1 className="flex text-4xl font-bold justify-center">Deisi Shop</h1>
 
-      <ul className="flex flex-col gap-4 justify-center items-center w-screen">
-        {filteredData.map((produto) => (
-          <li
-            key={produto.id + ""}
-            className="bg-purple-300 hover:bg-purple-400 p-4 w-1/2"
-          >
-            {produto.title} - {produto.price.toFixed(2)} €
-            <button
-              className="ml-4 bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
-              onClick={() => addToCart(produto)}
-            >
-              Adicionar ao Carrinho
-            </button>
-          </li>
-        ))}
-      </ul>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center w-screen p-4">
+  {filteredData.map((produto) => (
+    <li
+      key={produto.id}
+      className="bg-purple-300 hover:bg-purple-400 p-6 rounded-lg shadow-md flex flex-col items-center"
+    >
+      <h2 className="text-xl font-bold mb-4 text-center">{produto.title}</h2>
+      <img
+        src={produto.image} // Certifique-se de que a propriedade 'image' existe no objeto 'produto'
+        alt={produto.title}
+        className="w-full h-48 object-cover mb-4 rounded"
+      />
+      <p className="text-gray-700 mb-4 text-center">{produto.description}</p>
+      <p className="text-lg font-semibold mb-4">{produto.price.toFixed(2)} €</p>
+      <button
+        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+        onClick={() => addToCart(produto)}
+      >
+        Adicionar ao Carrinho
+      </button>
+    </li>
+  ))}
+</ul>
+
 
       <h2 className="flex text-2xl font-bold justify-center mt-8">Carrinho</h2>
       <ul className="flex flex-col gap-4 justify-center items-center w-screen">
