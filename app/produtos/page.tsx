@@ -86,7 +86,7 @@ export default function ProdutosPage() {
     >
       <h2 className="text-xl font-bold mb-4 text-center">{produto.title}</h2>
       <img
-        src={produto.image} // Certifique-se de que a propriedade 'image' existe no objeto 'produto'
+        src={produto.image}
         alt={produto.title}
         className="w-full h-48 object-cover mb-4 rounded"
       />
